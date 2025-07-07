@@ -21,13 +21,13 @@ app.use(cookieParser()); // for parsing cookies
 // Connect to the databse
 connectDB();
 
-// routes
-app.use("/api/auth", authRouter);
-app.use("/api/products", productRouter);
-app.use("/api/cart", cartRouter);
-app.use("/api/coupons", couponRouter);
-app.use("/api/payments", paymentRouter);
-app.use("/api/analytics", analyticsRouter);
+// // routes
+// app.use("/api/auth", authRouter);
+// app.use("/api/products", productRouter);
+// app.use("/api/cart", cartRouter);
+// app.use("/api/coupons", couponRouter);
+// app.use("/api/payments", paymentRouter);
+// app.use("/api/analytics", analyticsRouter);
 
 // serve frontend in production mode
 if (process.env.NODE_ENV === "production") {
