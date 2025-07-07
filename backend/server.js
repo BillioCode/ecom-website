@@ -15,7 +15,6 @@ const app = express();
 const __dirname = path.resolve(); // get current directory
 
 app.use(express.json({ limit: "10mb" })); // for parsing application/json
-// app.use(express.static("public")); // for serving static files
 app.use(cookieParser()); // for parsing cookies
 
 // routes
