@@ -15,11 +15,8 @@ const app = express();
 const __dirname = path.resolve(); // get current directory
 
 app.use(express.json({ limit: "10mb" })); // for parsing application/json
-app.use(express.static("public")); // for serving static files
+// app.use(express.static("public")); // for serving static files
 app.use(cookieParser()); // for parsing cookies
-
-// Connect to the databse
-connectDB();
 
 // routes
 app.use("/api/auth", authRouter);
@@ -40,4 +37,5 @@ if (process.env.NODE_ENV === "production") {
 
 app.listen(PORT || 5001, () => {
   console.log("Server is running on port", PORT || 5001);
+  connectDB();
 });
